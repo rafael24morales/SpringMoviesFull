@@ -16,4 +16,9 @@ public class PeliculaDao {
     public List<Pelicula> encuentraTodo(){
         return iPeliculaRepository.findAll();
     }
+
+    public boolean postPelicula(Pelicula pelicula) {
+
+        return  iPeliculaRepository.save(pelicula)==null?false:true;
+    }
 }
